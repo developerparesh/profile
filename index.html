@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeveloperParesh - Full Stack & Mobile App Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of DeveloperParesh — Full Stack & Mobile Developer specializing in React, Node.js, Python, Kotlin, and Jetpack Compose. Building modern digital experiences."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #3b82f6;
+        --secondary: #10b981;
+        --accent: #8b5cf6;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #1e293b 50%,
+          #334155 100%
+        );
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--secondary) 50%,
+          var(--accent) 100%
+        );
+        background-size: 200% 200%;
+        animation: gradientShift 10s ease infinite;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      }
+
+      .skill-badge {
+        transition: all 0.3s ease;
+      }
+
+      .skill-badge:hover {
+        transform: scale(1.05);
+      }
+
+      .code-bg {
+        background-image: radial-gradient(
+            circle at 25% 25%,
+            rgba(59, 130, 246, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 75% 75%,
+            rgba(139, 92, 246, 0.1) 0%,
+            transparent 50%
+          );
+      }
+
+      /* Custom VS Code icon color */
+      .vscode-icon {
+        color: #0078d7;
+      }
+
+      /* Mobile responsiveness improvements */
+      @media (max-width: 768px) {
+        .container {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        .hero-section {
+          padding-top: 6rem;
+          padding-bottom: 4rem;
+        }
+
+        .section-padding {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+
+        .mobile-text-center {
+          text-align: center;
+        }
+
+        .mobile-stack {
+          flex-direction: column;
+        }
+
+        .mobile-full-width {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .skill-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-sm">
+      <div
+        class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+          >DeveloperParesh</a
+        >
+
+        <div class="hidden md:flex space-x-6 lg:space-x-8">
+          <a href="#about" class="hover:text-blue-400 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-blue-400 transition-colors"
+            >Skills</a
+          >
+          <a href="#projects" class="hover:text-blue-400 transition-colors"
+            >Projects</a
+          >
+          <a href="#contact" class="hover:text-blue-400 transition-colors"
+            >Contact</a
+          >
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-slate-800 px-6 py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="#about" class="hover:text-blue-400 transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-blue-400 transition-colors"
+            >Skills</a
+          >
+          <a href="#projects" class="hover:text-blue-400 transition-colors"
+            >Projects</a
+          >
+          <a href="#contact" class="hover:text-blue-400 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center justify-center gradient-bg code-bg hero-section pt-16"
+    >
+      <div class="container mx-auto px-4 sm:px-6 text-center">
+        <div class="fade-in">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+          >
+            Hi, I'm
+            <span
+              class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+              >DeveloperParesh</span
+            >
+            👋
+          </h1>
+          <p class="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 sm:mb-8">
+            Full-Stack & Mobile App Developer
+          </p>
+          <p
+            class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 sm:mb-10 px-4"
+          >
+            Turning complex ideas into elegant, functional applications that
+            users love.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4"
+          >
+            <a
+              href="#projects"
+              class="px-5 sm:px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-medium hover:shadow-lg transition-all transform hover:-translate-y-1 text-sm sm:text-base"
+              >View My Work</a
+            >
+            <a
+              href="#contact"
+              class="px-5 sm:px-6 py-3 bg-slate-800 border border-slate-700 rounded-xl font-medium hover:bg-slate-700 transition-all text-sm sm:text-base"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-12 sm:py-16 md:py-20 bg-slate-800 section-padding"
+    >
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
+        >
+          About Me
+        </h2>
+
+        <div class="max-w-4xl mx-auto fade-in">
+          <div class="bg-slate-900 rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl">
+            <p class="text-base sm:text-lg text-slate-300 mb-4 sm:mb-6">
+              I'm a passionate full-stack and mobile developer with over 3 years
+              of experience building scalable web and mobile applications. My
+              expertise spans across modern technologies including React,
+              Node.js, Python, Kotlin, and Java with Jetpack Compose.
+            </p>
+            <p class="text-base sm:text-lg text-slate-300 mb-4 sm:mb-6">
+              I specialize in creating performant, user-friendly applications
+              that solve real-world problems. Whether it's a responsive web
+              application or a native mobile app, I focus on delivering clean,
+              maintainable code and exceptional user experiences.
+            </p>
+            <p class="text-base sm:text-lg text-slate-300 mb-6 sm:mb-8">
+              Beyond coding, I'm passionate about UI/UX design principles and
+              performance optimization. I believe that great applications should
+              not only function flawlessly but also provide an intuitive and
+              delightful experience for users.
+            </p>
+
+            <div class="flex justify-center">
+              <a
+                href="#"
+                class="px-5 sm:px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-medium hover:shadow-lg transition-all inline-flex items-center gap-2 text-sm sm:text-base"
+              >
+                <i class="fas fa-download"></i> Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="py-12 sm:py-16 md:py-20 gradient-bg section-padding"
+    >
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
+        >
+          Skills & Technologies
+        </h2>
+
+        <div class="max-w-6xl mx-auto">
+          <!-- Frontend -->
+          <div class="mb-8 sm:mb-12 fade-in">
+            <h3
+              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-blue-400"
+            >
+              Frontend
+            </h3>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
+            >
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-html5 text-orange-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">HTML</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-css3-alt text-blue-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">CSS</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-js-square text-yellow-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">JavaScript</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-react text-cyan-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">React</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-vuejs text-green-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Vue.js</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-wind text-teal-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Tailwind</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="mb-8 sm:mb-12 fade-in">
+            <h3
+              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-green-400"
+            >
+              Backend
+            </h3>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
+            >
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-node-js text-green-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Node.js</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-python text-yellow-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Python</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-database text-blue-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">MongoDB</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-server text-gray-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Express</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-fire text-orange-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Firebase</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-cloud text-blue-300 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">AWS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="mb-8 sm:mb-12 fade-in">
+            <h3
+              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-purple-400"
+            >
+              Mobile
+            </h3>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
+            >
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-android text-green-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Android</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-apple text-gray-300 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">iOS</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-react text-cyan-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">React Native</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-mobile-alt text-blue-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Kotlin</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-java text-red-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Java</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-paint-brush text-purple-400 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Jetpack Compose</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="fade-in">
+            <h3
+              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-yellow-400"
+            >
+              Tools
+            </h3>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
+            >
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-git-alt text-orange-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Git</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-github text-gray-300 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">GitHub</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-figma text-purple-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Figma</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i class="fas fa-code vscode-icon text-xl sm:text-2xl mb-2"></i>
+                <p class="text-sm sm:text-base">VS Code</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fab fa-docker text-blue-500 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Docker</p>
+              </div>
+              <div
+                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
+              >
+                <i
+                  class="fas fa-code text-blue-300 text-xl sm:text-2xl mb-2"
+                ></i>
+                <p class="text-sm sm:text-base">Postman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="py-12 sm:py-16 md:py-20 bg-slate-800 section-padding"
+    >
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
+        >
+          My Projects
+        </h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 project-grid"
+        >
+          <!-- Project 1 -->
+          <div
+            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div
+              class="h-40 sm:h-48 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center"
+            >
+              <i class="fas fa-mobile-alt text-white text-4xl sm:text-6xl"></i>
+            </div>
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                TaskFlow Mobile App
+              </h3>
+              <p class="text-slate-400 mb-4 text-sm sm:text-base">
+                A productivity app built with Kotlin and Jetpack Compose that
+                helps users organize tasks with an intuitive UI and smart
+                notifications.
+              </p>
+              <div class="flex justify-between">
+                <a
+                  href="#"
+                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+                  >View Project</a
+                >
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div
+              class="h-40 sm:h-48 bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center"
+            >
+              <i
+                class="fas fa-shopping-cart text-white text-4xl sm:text-6xl"
+              ></i>
+            </div>
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                E-Commerce Platform
+              </h3>
+              <p class="text-slate-400 mb-4 text-sm sm:text-base">
+                A full-stack e-commerce solution with React frontend, Node.js
+                backend, and MongoDB database. Features payment integration and
+                admin dashboard.
+              </p>
+              <div class="flex justify-between">
+                <a
+                  href="#"
+                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+                  >View Project</a
+                >
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div
+              class="h-40 sm:h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center"
+            >
+              <i class="fas fa-chart-line text-white text-4xl sm:text-6xl"></i>
+            </div>
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                Finance Dashboard
+              </h3>
+              <p class="text-slate-400 mb-4 text-sm sm:text-base">
+                A React-based financial analytics dashboard with real-time data
+                visualization, built with D3.js and integrated with multiple
+                financial APIs.
+              </p>
+              <div class="flex justify-between">
+                <a
+                  href="#"
+                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+                  >View Project</a
+                >
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div
+              class="h-40 sm:h-48 bg-gradient-to-r from-yellow-500 to-red-500 flex items-center justify-center"
+            >
+              <i class="fas fa-robot text-white text-4xl sm:text-6xl"></i>
+            </div>
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                AI Chat Assistant
+              </h3>
+              <p class="text-slate-400 mb-4 text-sm sm:text-base">
+                A Python-based chatbot with natural language processing
+                capabilities, integrated into a React frontend with real-time
+                messaging.
+              </p>
+              <div class="flex justify-between">
+                <a
+                  href="#"
+                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+                  >View Project</a
+                >
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div
+              class="h-40 sm:h-48 bg-gradient-to-r from-indigo-500 to-blue-400 flex items-center justify-center"
+            >
+              <i
+                class="fas fa-map-marked-alt text-white text-4xl sm:text-6xl"
+              ></i>
+            </div>
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                Travel Companion App
+              </h3>
+              <p class="text-slate-400 mb-4 text-sm sm:text-base">
+                A React Native travel application with location services,
+                itinerary planning, and social features for sharing travel
+                experiences.
+              </p>
+              <div class="flex justify-between">
+                <a
+                  href="#"
+                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+                  >View Project</a
+                >
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div
+              class="h-40 sm:h-48 bg-gradient-to-r from-teal-500 to-green-500 flex items-center justify-center"
+            >
+              <i class="fas fa-gamepad text-white text-4xl sm:text-6xl"></i>
+            </div>
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                Multiplayer Game
+              </h3>
+              <p class="text-slate-400 mb-4 text-sm sm:text-base">
+                A real-time multiplayer game built with Socket.io, Node.js, and
+                React. Features live chat, leaderboards, and responsive design.
+              </p>
+              <div class="flex justify-between">
+                <a
+                  href="#"
+                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+                  >View Project</a
+                >
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-12 sm:py-16 md:py-20 gradient-bg section-padding"
+    >
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
+        >
+          Get In Touch
+        </h2>
+
+        <div
+          class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 contact-grid"
+        >
+          <!-- Contact Form -->
+          <div class="fade-in">
+            <form
+              id="contact-form"
+              class="bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl"
+            >
+              <div class="mb-4 sm:mb-6">
+                <label
+                  for="name"
+                  class="block text-slate-300 mb-2 text-sm sm:text-base"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full bg-slate-700 border border-slate-600 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                />
+              </div>
+
+              <div class="mb-4 sm:mb-6">
+                <label
+                  for="email"
+                  class="block text-slate-300 mb-2 text-sm sm:text-base"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full bg-slate-700 border border-slate-600 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                />
+              </div>
+
+              <div class="mb-4 sm:mb-6">
+                <label
+                  for="message"
+                  class="block text-slate-300 mb-2 text-sm sm:text-base"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full bg-slate-700 border border-slate-600 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl py-2 sm:py-3 font-medium hover:shadow-lg transition-all text-sm sm:text-base"
+              >
+                Send Message
+              </button>
+
+              <div
+                id="form-message"
+                class="mt-4 text-center hidden text-sm sm:text-base"
+              ></div>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="fade-in">
+            <div class="bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl h-full">
+              <h3 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6">
+                Let's Connect
+              </h3>
+              <p class="text-slate-300 mb-6 sm:mb-8 text-sm sm:text-base">
+                I'm always open to discussing new opportunities, creative
+                projects, or just having a chat about technology and
+                development.
+              </p>
+
+              <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center mr-3 sm:mr-4"
+                  >
+                    <i
+                      class="fas fa-envelope text-blue-400 text-sm sm:text-base"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-400 text-sm sm:text-base">Email</p>
+                    <p class="text-sm sm:text-base">
+                      hello@developerparesh.com
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center mr-3 sm:mr-4"
+                  >
+                    <i
+                      class="fas fa-map-marker-alt text-green-400 text-sm sm:text-base"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-400 text-sm sm:text-base">Location</p>
+                    <p class="text-sm sm:text-base">
+                      Remote / Available Worldwide
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 sm:mt-8">
+                <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+                  Follow Me
+                </h4>
+                <div class="flex space-x-3 sm:space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-500 transition-colors"
+                  >
+                    <i class="fab fa-github text-sm sm:text-base"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-400 transition-colors"
+                  >
+                    <i class="fab fa-linkedin-in text-sm sm:text-base"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-pink-500 transition-colors"
+                  >
+                    <i class="fab fa-dribbble text-sm sm:text-base"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-300 transition-colors"
+                  >
+                    <i class="fab fa-twitter text-sm sm:text-base"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-6 sm:py-8">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mobile-stack"
+        >
+          <div class="mb-4 md:mb-0">
+            <p class="text-slate-400 text-sm sm:text-base">
+              © 2023 DeveloperParesh. All rights reserved.
+            </p>
+          </div>
+
+          <div class="flex space-x-4 sm:space-x-6 footer-links">
+            <a
+              href="#"
+              class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+            >
+              <i class="fab fa-google text-green-400 mr-1"></i> Business Profile
+            </a>
+            <a
+              href="#"
+              class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-S2ZLK5802Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-S2ZLK5802Q");
+    </script>
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Scroll animations
+      function checkVisibility() {
+        const elements = document.querySelectorAll(".fade-in");
+        elements.forEach((element) => {
+          const position = element.getBoundingClientRect();
+          if (position.top < window.innerHeight - 100) {
+            element.classList.add("visible");
+          }
+        });
+      }
+
+      // Initial check
+      checkVisibility();
+
+      // Check on scroll
+      window.addEventListener("scroll", checkVisibility);
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            // Close mobile menu if open
+            document.getElementById("mobile-menu").classList.add("hidden");
+          }
+        });
+      });
+
+      // Contact form submission
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = this;
+          const formData = new FormData(form);
+          const messageDiv = document.getElementById("form-message");
+
+          // Show loading state
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
+
+          // Simulate AJAX request (replace with actual endpoint)
+          setTimeout(() => {
+            // For demo purposes, we'll simulate a successful response
+            showMessage(
+              "Message sent successfully! I'll get back to you soon.",
+              "success"
+            );
+            form.reset();
+
+            // Reset button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }, 1500);
+
+          function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className =
+              "mt-4 text-center p-3 rounded-xl text-sm sm:text-base";
+            if (type === "success") {
+              messageDiv.classList.add("bg-green-900", "text-green-300");
+            } else {
+              messageDiv.classList.add("bg-red-900", "text-red-300");
+            }
+            messageDiv.classList.remove("hidden");
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+              messageDiv.classList.add("hidden");
+            }, 5000);
+          }
+        });
+    </script>
+  </body>
+</html>
