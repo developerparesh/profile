@@ -1,1096 +1,1403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DeveloperParesh - Full Stack & Mobile App Developer</title>
-    <meta
-      name="description"
-      content="Portfolio of DeveloperParesh — Full Stack & Mobile Developer specializing in React, Node.js, Python, Kotlin, and Jetpack Compose. Building modern digital experiences."
-    />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
-    />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paresh Chauhan - Expert Android & Kotlin App Developer | Google Play Deployment</title>
+  <meta name="description"
+    content="Paresh Chauhan: Professional Android developer specializing in Kotlin, Jetpack Compose, and Google Play deployment. Build beautiful, high-performance mobile apps with 2+ years experience.">
 
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <!-- Primary Keywords -->
+  <meta name="keywords"
+    content="Android developer, Kotlin app developer, Android UI/UX, Google Play deployment, mobile app developer, Android expert, Kotlin developer, Android app development">
 
-    <style>
-      :root {
-        --primary: #3b82f6;
-        --secondary: #10b981;
-        --accent: #8b5cf6;
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://pareshchauhan.com">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Paresh Chauhan - Expert Android & Kotlin App Developer">
+  <meta property="og:description"
+    content="Professional Android developer specializing in Kotlin, Jetpack Compose, and Google Play deployment. Build beautiful, high-performance mobile apps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pareshchauhan.com">
+  <meta property="og:image" content="https://pareshchauhan.com/images/og-image.jpg">
+  <meta property="og:site_name" content="Paresh Chauhan - Android Developer">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Paresh Chauhan - Expert Android & Kotlin App Developer">
+  <meta name="twitter:description"
+    content="Professional Android developer specializing in Kotlin, Jetpack Compose, and Google Play deployment.">
+  <meta name="twitter:image" content="https://pareshchauhan.com/images/twitter-card.jpg">
+  <meta name="twitter:site" content="@pareshchauhan">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    }
+
+    .android-green {
+      color: #3ddc84;
+    }
+
+    .kotlin-purple {
+      color: #7F52FF;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .experience-timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .experience-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #3ddc84;
+    }
+
+    .experience-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      left: -2.3rem;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #3ddc84;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-text-center {
+        text-align: center;
       }
 
-      body {
-        font-family: "Inter", sans-serif;
-        scroll-behavior: smooth;
+      .mobile-full-width {
+        width: 100%;
       }
+    }
+  </style>
+</head>
 
-      .gradient-bg {
-        background: linear-gradient(
-          135deg,
-          #0f172a 0%,
-          #1e293b 50%,
-          #334155 100%
-        );
-      }
+<body class="bg-slate-900 text-white">
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-sm">
+    <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-lg sm:text-xl font-bold android-green">Paresh Chauhan</a>
 
-      .hero-gradient {
-        background: linear-gradient(
-          135deg,
-          var(--primary) 0%,
-          var(--secondary) 50%,
-          var(--accent) 100%
-        );
-        background-size: 200% 200%;
-        animation: gradientShift 10s ease infinite;
-      }
-
-      @keyframes gradientShift {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-      }
-
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .card-hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-      }
-
-      .skill-badge {
-        transition: all 0.3s ease;
-      }
-
-      .skill-badge:hover {
-        transform: scale(1.05);
-      }
-
-      .code-bg {
-        background-image: radial-gradient(
-            circle at 25% 25%,
-            rgba(59, 130, 246, 0.1) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 75% 75%,
-            rgba(139, 92, 246, 0.1) 0%,
-            transparent 50%
-          );
-      }
-
-      /* Custom VS Code icon color */
-      .vscode-icon {
-        color: #0078d7;
-      }
-
-      /* Mobile responsiveness improvements */
-      @media (max-width: 768px) {
-        .container {
-          padding-left: 1rem;
-          padding-right: 1rem;
-        }
-
-        .hero-section {
-          padding-top: 6rem;
-          padding-bottom: 4rem;
-        }
-
-        .section-padding {
-          padding-top: 3rem;
-          padding-bottom: 3rem;
-        }
-
-        .mobile-text-center {
-          text-align: center;
-        }
-
-        .mobile-stack {
-          flex-direction: column;
-        }
-
-        .mobile-full-width {
-          width: 100%;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .skill-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .project-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .contact-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-links {
-          flex-direction: column;
-          gap: 1rem;
-        }
-      }
-    </style>
-  </head>
-  <body class="bg-slate-900 text-white">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-sm">
-      <div
-        class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center"
-      >
-        <a
-          href="#"
-          class="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
-          >DeveloperParesh</a
-        >
-
-        <div class="hidden md:flex space-x-6 lg:space-x-8">
-          <a href="#about" class="hover:text-blue-400 transition-colors"
-            >About</a
-          >
-          <a href="#skills" class="hover:text-blue-400 transition-colors"
-            >Skills</a
-          >
-          <a href="#projects" class="hover:text-blue-400 transition-colors"
-            >Projects</a
-          >
-          <a href="#contact" class="hover:text-blue-400 transition-colors"
-            >Contact</a
-          >
-        </div>
-
-        <button id="mobile-menu-btn" class="md:hidden text-xl">
-          <i class="fas fa-bars"></i>
-        </button>
+      <div class="hidden md:flex space-x-6 lg:space-x-8">
+        <a href="#about" class="hover:text-green-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-green-400 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-green-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-green-400 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-green-400 transition-colors">Contact</a>
       </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden bg-slate-800 px-6 py-4">
-        <div class="flex flex-col space-y-4">
-          <a href="#about" class="hover:text-blue-400 transition-colors"
-            >About</a
-          >
-          <a href="#skills" class="hover:text-blue-400 transition-colors"
-            >Skills</a
-          >
-          <a href="#projects" class="hover:text-blue-400 transition-colors"
-            >Projects</a
-          >
-          <a href="#contact" class="hover:text-blue-400 transition-colors"
-            >Contact</a
-          >
+      <button id="mobile-menu-btn" class="md:hidden text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-slate-800 px-6 py-4">
+      <div class="flex flex-col space-y-4">
+        <a href="#about" class="hover:text-green-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-green-400 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-green-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-green-400 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-green-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center gradient-bg pt-16">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <div class="fade-in">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          Expert <span class="android-green">Android</span> & <span class="kotlin-purple">Kotlin</span> App
+          Developer
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 sm:mb-8">
+          2+ Years Experience • 25+ Apps Published • Google Play Store Expert
+        </p>
+        <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 sm:mb-10 px-4">
+          I transform ideas into polished Android applications with clean code, modern UI/UX, and seamless
+          Google Play deployment.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
+          <a href="#contact"
+            class="px-5 sm:px-6 py-3 bg-gradient-to-r from-green-500 to-purple-500 rounded-xl font-medium hover:shadow-lg transition-all transform hover:-translate-y-1 text-sm sm:text-base">
+            Start Your Project
+          </a>
+          <a href="#projects"
+            class="px-5 sm:px-6 py-3 bg-slate-800 border border-slate-700 rounded-xl font-medium hover:bg-slate-700 transition-all text-sm sm:text-base">
+            View My Work
+          </a>
         </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section
-      class="min-h-screen flex items-center justify-center gradient-bg code-bg hero-section pt-16"
-    >
-      <div class="container mx-auto px-4 sm:px-6 text-center">
-        <div class="fade-in">
-          <h1
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
-          >
-            Hi, I'm
-            <span
-              class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
-              >DeveloperParesh</span
-            >
-            👋
-          </h1>
-          <p class="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 sm:mb-8">
-            Full-Stack & Mobile App Developer
+  <!-- About Section -->
+  <section id="about" class="py-12 sm:py-16 md:py-20 bg-slate-800">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center">
+        About Me
+      </h2>
+
+      <div class="max-w-4xl mx-auto fade-in">
+        <div class="bg-slate-900 rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl">
+          <p class="text-base sm:text-lg text-slate-300 mb-4 sm:mb-6">
+            I'm Paresh Chauhan, a dedicated Android Developer with over 2 years of specialized experience in
+            Kotlin and Java app development. I've successfully designed, built, and deployed diverse Android
+            applications ranging from photo editors to GPS-based tracking apps.
           </p>
-          <p
-            class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 sm:mb-10 px-4"
-          >
-            Turning complex ideas into elegant, functional applications that
-            users love.
+          <p class="text-base sm:text-lg text-slate-300 mb-4 sm:mb-6">
+            My expertise spans the full Android development lifecycle—from concept and design to
+            development, testing, and successful deployment on the Google Play Store, Samsung Store, and Mi
+            Store. I specialize in creating intuitive interfaces that follow Material Design principles
+            while ensuring optimal performance.
+          </p>
+          <p class="text-base sm:text-lg text-slate-300 mb-4 sm:mb-6">
+            I stay current with the latest Android development trends, including Jetpack Compose,
+            Coroutines, and modern architecture patterns. This allows me to build scalable, maintainable
+            applications that provide exceptional user experiences while following best practices for code
+            quality and performance optimization.
           </p>
 
-          <div
-            class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4"
-          >
-            <a
-              href="#projects"
-              class="px-5 sm:px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-medium hover:shadow-lg transition-all transform hover:-translate-y-1 text-sm sm:text-base"
-              >View My Work</a
-            >
-            <a
-              href="#contact"
-              class="px-5 sm:px-6 py-3 bg-slate-800 border border-slate-700 rounded-xl font-medium hover:bg-slate-700 transition-all text-sm sm:text-base"
-              >Contact Me</a
-            >
+          <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+            <a href="#contact"
+              class="px-5 sm:px-6 py-3 bg-gradient-to-r from-green-500 to-purple-500 rounded-xl font-medium hover:shadow-lg transition-all inline-flex items-center gap-2 text-sm sm:text-base">
+              <i class="fas fa-paper-plane"></i> Let's Discuss Your Project
+            </a>
+            <a href="#contact"
+              class="px-5 sm:px-6 py-3 bg-slate-700 rounded-xl font-medium hover:bg-slate-600 transition-all inline-flex items-center gap-2 text-sm sm:text-base">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section
-      id="about"
-      class="py-12 sm:py-16 md:py-20 bg-slate-800 section-padding"
-    >
-      <div class="container mx-auto px-4 sm:px-6">
-        <h2
-          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
-        >
-          About Me
-        </h2>
+  <!-- Experience Section -->
+  <section id="experience" class="py-12 sm:py-16 md:py-20 gradient-bg">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center">
+        Professional Experience
+      </h2>
 
-        <div class="max-w-4xl mx-auto fade-in">
-          <div class="bg-slate-900 rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl">
-            <p class="text-base sm:text-lg text-slate-300 mb-4 sm:mb-6">
-              I'm a passionate full-stack and mobile developer with over 3 years
-              of experience building scalable web and mobile applications. My
-              expertise spans across modern technologies including React,
-              Node.js, Python, Kotlin, and Java with Jetpack Compose.
-            </p>
-            <p class="text-base sm:text-lg text-slate-300 mb-4 sm:mb-6">
-              I specialize in creating performant, user-friendly applications
-              that solve real-world problems. Whether it's a responsive web
-              application or a native mobile app, I focus on delivering clean,
-              maintainable code and exceptional user experiences.
-            </p>
-            <p class="text-base sm:text-lg text-slate-300 mb-6 sm:mb-8">
-              Beyond coding, I'm passionate about UI/UX design principles and
-              performance optimization. I believe that great applications should
-              not only function flawlessly but also provide an intuitive and
-              delightful experience for users.
-            </p>
+      <div class="max-w-4xl mx-auto">
+        <div class="fade-in bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+          <div class="experience-timeline">
+            <!-- Android Developer Experience -->
+            <div class="experience-item">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                <h3 class="text-xl font-bold android-green">Android Developer</h3>
+                <span class="text-slate-400 text-sm sm:text-base bg-slate-700 px-3 py-1 rounded-full mt-1 sm:mt-0">May
+                  2022 – Dec 2023</span>
+              </div>
+              <p class="text-slate-300 font-medium mb-3">AndroTech Solutions</p>
+              <p class="text-slate-400 mb-4">
+                Joined as a fresher and developed over 25 full-feature Android applications with diverse
+                functionalities.
+              </p>
+              <ul class="text-slate-400 space-y-2 ml-4 list-disc">
+                <li>Photo Frame, Gallery, and Advanced Photo Editor apps</li>
+                <li>Music & Video Player with Downloader & Compression</li>
+                <li>Status Saver for WhatsApp with all features</li>
+                <li>Call Tune with Animation Interface on Incoming Calls</li>
+                <li>Live TV App with Real-Time Show Streaming</li>
+                <li>Voice Changer, VPN, AI Chat (ChatGPT API), File Manager</li>
+                <li>Remote Control, Device Finder by Clap/Gesture/Location</li>
+              </ul>
+            </div>
 
-            <div class="flex justify-center">
-              <a
-                href="#"
-                class="px-5 sm:px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-medium hover:shadow-lg transition-all inline-flex items-center gap-2 text-sm sm:text-base"
-              >
-                <i class="fas fa-download"></i> Download Resume
+            <!-- Freelance Experience -->
+            <div class="experience-item">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                <h3 class="text-xl font-bold android-green">Freelance Android Developer</h3>
+                <span class="text-slate-400 text-sm sm:text-base bg-slate-700 px-3 py-1 rounded-full mt-1 sm:mt-0">Jan
+                  2024 – Present</span>
+              </div>
+              <p class="text-slate-400 mb-4">
+                Handled independent Android app projects with diverse requirements and functionalities.
+              </p>
+              <ul class="text-slate-400 space-y-2 ml-4 list-disc">
+                <li>Real-time GPS Phone Tracker updating every hour</li>
+                <li>QR Menu App for Restaurants</li>
+                <li>Invoice App, SEO Guide App</li>
+                <li>Online Tutor App using Zoom/Google Meet API</li>
+                <li>Volunteer and Vendor Management Apps</li>
+                <li>Smart Parking with EV Charging Station App</li>
+                <li>Bus Rapid Transit System App</li>
+                <li>Gallery Book app, Trip Expenses App</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-12 sm:py-16 md:py-20 gradient-bg section-padding">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center">
+        Skills & Technologies
+      </h2>
+
+      <div class="max-w-6xl mx-auto">
+        <!-- Frontend -->
+        <div class="mb-8 sm:mb-12 fade-in">
+          <h3 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-blue-400">
+            Frontend
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid">
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-html5 text-orange-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">HTML</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-css3-alt text-blue-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">CSS</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-js-square text-yellow-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">JavaScript</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-react text-cyan-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">React</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-vuejs text-green-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Vue.js</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-wind text-teal-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Tailwind</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="mb-8 sm:mb-12 fade-in">
+          <h3 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-green-400">
+            Backend
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid">
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-node-js text-green-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Node.js</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-python text-yellow-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Python</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-database text-blue-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">MongoDB</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-server text-gray-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Express</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-fire text-orange-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Firebase</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-cloud text-blue-300 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">AWS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="mb-8 sm:mb-12 fade-in">
+          <h3 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-purple-400">
+            Mobile
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid">
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-android text-green-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Android</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-apple text-gray-300 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">iOS</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-react text-cyan-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">React Native</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-mobile-alt text-blue-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Kotlin</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-java text-red-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Java</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-paint-brush text-purple-400 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Jetpack Compose</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="fade-in">
+          <h3 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-yellow-400">
+            Tools
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid">
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-git-alt text-orange-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Git</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-github text-gray-300 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">GitHub</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-figma text-purple-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Figma</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-code vscode-icon text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">VS Code</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fab fa-docker text-blue-500 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Docker</p>
+            </div>
+            <div class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700">
+              <i class="fas fa-code text-blue-300 text-xl sm:text-2xl mb-2"></i>
+              <p class="text-sm sm:text-base">Postman</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <!-- Projects Section -->
+  <section id="projects" class="py-12 sm:py-16 md:py-20 gradient-bg">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center">
+        Featured Projects (25+ Apps Published)
+      </h2>
+
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Project 1 - Photo Editor -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="photo-editor">
+            <div class="h-40 bg-gradient-to-r from-green-500 to-purple-500 flex items-center justify-center">
+              <i class="fas fa-camera text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Advanced Photo Editor</h3>
+              <p class="text-slate-400 mb-4">
+                Professional photo editing app with filters, frames, enhancement tools, and AI-powered
+                effects.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Kotlin • AI Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 - GPS Tracker -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="gps-tracker">
+            <div class="h-40 bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Real-time GPS Tracker</h3>
+              <p class="text-slate-400 mb-4">
+                Location tracking app with hourly updates, geofencing, and secure family sharing
+                features.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Kotlin • GPS API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 - Live TV -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="live-tv">
+            <div class="h-40 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+              <i class="fas fa-tv text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Live TV Streaming</h3>
+              <p class="text-slate-400 mb-4">
+                Multi-channel TV streaming app with real-time shows, favorites, and program guide.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Java • Streaming</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 - AI Chat -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="ai-chat">
+            <div class="h-40 bg-gradient-to-r from-yellow-500 to-red-500 flex items-center justify-center">
+              <i class="fas fa-robot text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">AI Chat Assistant</h3>
+              <p class="text-slate-400 mb-4">
+                Intelligent chatbot integrated with ChatGPT API for natural conversations and task
+                assistance.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Kotlin • AI API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 - QR Menu -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="qr-menu">
+            <div class="h-40 bg-gradient-to-r from-indigo-500 to-blue-400 flex items-center justify-center">
+              <i class="fas fa-qrcode text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">QR Menu Restaurant</h3>
+              <p class="text-slate-400 mb-4">
+                Digital menu solution with QR scanning, order management, and payment integration.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Kotlin • QR Code</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 - Smart Parking -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="smart-parking">
+            <div class="h-40 bg-gradient-to-r from-teal-500 to-green-500 flex items-center justify-center">
+              <i class="fas fa-car text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Smart Parking & EV Charging</h3>
+              <p class="text-slate-400 mb-4">
+                Parking management with EV charging station locator, reservations, and payment system.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Kotlin • Maps API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 - Trip Expenses App -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="trip-expenses">
+            <div class="h-40 bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
+              <i class="fas fa-receipt text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Trip Expenses Manager</h3>
+              <p class="text-slate-400 mb-4">
+                Comprehensive travel expense tracker with receipt scanning, budget alerts, and
+                multi-currency support.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Kotlin • OCR • Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 - Website Chat Bot -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="website-chatbot">
+            <div class="h-40 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
+              <i class="fas fa-comments text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Website Chat Bot</h3>
+              <p class="text-slate-400 mb-4">
+                AI-powered customer support chatbot for websites with natural language processing and
+                analytics.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Web App</span>
+                <span class="text-slate-500 text-sm">JavaScript • AI • Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 - LipSync App -->
+          <div
+            class="fade-in bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer project-card"
+            data-project="lipsync">
+            <div class="h-40 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+              <i class="fas fa-film text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">LipSync Video Editor</h3>
+              <p class="text-slate-400 mb-4">
+                Advanced video editing app with real-time lip sync, audio matching, and special effects.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-green-400 text-sm font-medium">Play Store</span>
+                <span class="text-slate-500 text-sm">Kotlin • ML • Video Processing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Projects Note -->
+        <div class="text-center mt-12 fade-in">
+          <div class="bg-slate-800 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto">
+            <h3 class="text-xl font-bold mb-3 android-green">And Many More...</h3>
+            <p class="text-slate-400 mb-4">
+              I've developed 25+ Android applications across various categories including VPN apps,
+              call tune apps, gallery books, invoice apps, and specialized business solutions.
+            </p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+              <span class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm">VPN Apps</span>
+              <span class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm">Call Tune
+                Apps</span>
+              <span class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm">Gallery
+                Books</span>
+              <span class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm">Invoice Apps</span>
+              <span class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm">SEO Tools</span>
+              <span class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm">Remote
+                Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div id="project-modal"
+    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+    <div class="bg-slate-800 rounded-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+      <div class="p-6">
+        <!-- Close Button -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 id="modal-title" class="text-2xl font-bold android-green">Project Details</h2>
+          <button id="close-modal" class="text-slate-400 hover:text-white text-2xl">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <!-- Project Details -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Left Column - Project Info -->
+          <div>
+            <div id="modal-image" class="h-48 rounded-xl mb-6 flex items-center justify-center">
+              <!-- Image will be dynamically inserted -->
+            </div>
+
+            <div id="modal-description" class="text-slate-300 mb-6">
+              <!-- Description will be dynamically inserted -->
+            </div>
+
+            <div class="mb-6">
+              <h3 class="text-lg font-bold mb-3 android-green">Technologies Used</h3>
+              <div id="modal-technologies" class="flex flex-wrap gap-2">
+                <!-- Technologies will be dynamically inserted -->
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-3 android-green">Key Features</h3>
+              <ul id="modal-features" class="text-slate-300 space-y-2">
+                <!-- Features will be dynamically inserted -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column - Hire Me Section -->
+          <div class="bg-slate-900 rounded-xl p-6">
+            <h3 class="text-xl font-bold mb-4 text-center android-green">Hire Me For Your Project</h3>
+
+            <!-- Development Packages -->
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold mb-3 text-slate-300">Development Packages</h4>
+              <div class="space-y-3">
+                <div class="bg-slate-800 rounded-lg p-4">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-medium text-slate-300">Basic App</span>
+                    <span class="text-green-400 font-bold">₹15,000 - ₹30,000</span>
+                  </div>
+                  <p class="text-slate-400 text-sm">Simple apps with basic functionality</p>
+                </div>
+
+                <div class="bg-slate-800 rounded-lg p-4">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-medium text-slate-300">Standard App</span>
+                    <span class="text-green-400 font-bold">₹30,000 - ₹60,000</span>
+                  </div>
+                  <p class="text-slate-400 text-sm">Apps with API integration & advanced features</p>
+                </div>
+
+                <div class="bg-slate-800 rounded-lg p-4">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="font-medium text-slate-300">Premium App</span>
+                    <span class="text-green-400 font-bold">₹60,000 - ₹1,20,000</span>
+                  </div>
+                  <p class="text-slate-400 text-sm">Complex apps with AI/ML & real-time features</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold mb-3 text-slate-300">Development Timeline</h4>
+              <div class="space-y-2 text-slate-300">
+                <div class="flex justify-between">
+                  <span>Basic Apps:</span>
+                  <span class="text-green-400">2-3 weeks</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Standard Apps:</span>
+                  <span class="text-green-400">3-6 weeks</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Premium Apps:</span>
+                  <span class="text-green-400">6-10 weeks</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Included -->
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold mb-3 text-slate-300">Services Included</h4>
+              <ul class="text-slate-300 space-y-2 text-sm">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-400 mr-2"></i>
+                  Complete Android App Development
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-400 mr-2"></i>
+                  UI/UX Design & Prototyping
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-400 mr-2"></i>
+                  Google Play Store Deployment
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-400 mr-2"></i>
+                  3 Months Free Maintenance
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-400 mr-2"></i>
+                  Source Code Delivery
+                </li>
+              </ul>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="space-y-3">
+              <a href="#contact"
+                class="w-full bg-gradient-to-r from-green-500 to-purple-500 rounded-xl py-3 font-medium hover:shadow-lg transition-all text-center block">
+                Start Your Project
+              </a>
+              <a href="https://wa.me/916352708697" target="_blank"
+                class="w-full bg-green-600 rounded-xl py-3 font-medium hover:bg-green-700 transition-all text-center block">
+                <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
               </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Skills Section -->
-    <section
-      id="skills"
-      class="py-12 sm:py-16 md:py-20 gradient-bg section-padding"
-    >
-      <div class="container mx-auto px-4 sm:px-6">
-        <h2
-          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
-        >
-          Skills & Technologies
-        </h2>
-
-        <div class="max-w-6xl mx-auto">
-          <!-- Frontend -->
-          <div class="mb-8 sm:mb-12 fade-in">
-            <h3
-              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-blue-400"
-            >
-              Frontend
-            </h3>
-            <div
-              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
-            >
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-html5 text-orange-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">HTML</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-css3-alt text-blue-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">CSS</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-js-square text-yellow-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">JavaScript</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-react text-cyan-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">React</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-vuejs text-green-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Vue.js</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-wind text-teal-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Tailwind</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div class="mb-8 sm:mb-12 fade-in">
-            <h3
-              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-green-400"
-            >
-              Backend
-            </h3>
-            <div
-              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
-            >
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-node-js text-green-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Node.js</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-python text-yellow-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Python</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-database text-blue-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">MongoDB</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-server text-gray-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Express</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-fire text-orange-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Firebase</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-cloud text-blue-300 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">AWS</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mobile -->
-          <div class="mb-8 sm:mb-12 fade-in">
-            <h3
-              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-purple-400"
-            >
-              Mobile
-            </h3>
-            <div
-              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
-            >
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-android text-green-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Android</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-apple text-gray-300 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">iOS</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-react text-cyan-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">React Native</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-mobile-alt text-blue-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Kotlin</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-java text-red-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Java</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-paint-brush text-purple-400 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Jetpack Compose</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tools -->
-          <div class="fade-in">
-            <h3
-              class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center text-yellow-400"
-            >
-              Tools
-            </h3>
-            <div
-              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 skill-grid"
-            >
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-git-alt text-orange-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Git</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-github text-gray-300 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">GitHub</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-figma text-purple-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Figma</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i class="fas fa-code vscode-icon text-xl sm:text-2xl mb-2"></i>
-                <p class="text-sm sm:text-base">VS Code</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fab fa-docker text-blue-500 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Docker</p>
-              </div>
-              <div
-                class="skill-badge bg-slate-800 rounded-xl p-3 sm:p-4 text-center hover:bg-slate-700"
-              >
-                <i
-                  class="fas fa-code text-blue-300 text-xl sm:text-2xl mb-2"
-                ></i>
-                <p class="text-sm sm:text-base">Postman</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section
-      id="projects"
-      class="py-12 sm:py-16 md:py-20 bg-slate-800 section-padding"
-    >
-      <div class="container mx-auto px-4 sm:px-6">
-        <h2
-          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
-        >
-          My Projects
-        </h2>
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 project-grid"
-        >
-          <!-- Project 1 -->
-          <div
-            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
-          >
-            <div
-              class="h-40 sm:h-48 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center"
-            >
-              <i class="fas fa-mobile-alt text-white text-4xl sm:text-6xl"></i>
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="text-lg sm:text-xl font-bold mb-2">
-                TaskFlow Mobile App
-              </h3>
-              <p class="text-slate-400 mb-4 text-sm sm:text-base">
-                A productivity app built with Kotlin and Jetpack Compose that
-                helps users organize tasks with an intuitive UI and smart
-                notifications.
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href="#"
-                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
-                  >View Project</a
-                >
-                <a
-                  href="#"
-                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div
-            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
-          >
-            <div
-              class="h-40 sm:h-48 bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center"
-            >
-              <i
-                class="fas fa-shopping-cart text-white text-4xl sm:text-6xl"
-              ></i>
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="text-lg sm:text-xl font-bold mb-2">
-                E-Commerce Platform
-              </h3>
-              <p class="text-slate-400 mb-4 text-sm sm:text-base">
-                A full-stack e-commerce solution with React frontend, Node.js
-                backend, and MongoDB database. Features payment integration and
-                admin dashboard.
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href="#"
-                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
-                  >View Project</a
-                >
-                <a
-                  href="#"
-                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div
-            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
-          >
-            <div
-              class="h-40 sm:h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center"
-            >
-              <i class="fas fa-chart-line text-white text-4xl sm:text-6xl"></i>
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="text-lg sm:text-xl font-bold mb-2">
-                Finance Dashboard
-              </h3>
-              <p class="text-slate-400 mb-4 text-sm sm:text-base">
-                A React-based financial analytics dashboard with real-time data
-                visualization, built with D3.js and integrated with multiple
-                financial APIs.
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href="#"
-                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
-                  >View Project</a
-                >
-                <a
-                  href="#"
-                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div
-            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
-          >
-            <div
-              class="h-40 sm:h-48 bg-gradient-to-r from-yellow-500 to-red-500 flex items-center justify-center"
-            >
-              <i class="fas fa-robot text-white text-4xl sm:text-6xl"></i>
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="text-lg sm:text-xl font-bold mb-2">
-                AI Chat Assistant
-              </h3>
-              <p class="text-slate-400 mb-4 text-sm sm:text-base">
-                A Python-based chatbot with natural language processing
-                capabilities, integrated into a React frontend with real-time
-                messaging.
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href="#"
-                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
-                  >View Project</a
-                >
-                <a
-                  href="#"
-                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div
-            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
-          >
-            <div
-              class="h-40 sm:h-48 bg-gradient-to-r from-indigo-500 to-blue-400 flex items-center justify-center"
-            >
-              <i
-                class="fas fa-map-marked-alt text-white text-4xl sm:text-6xl"
-              ></i>
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="text-lg sm:text-xl font-bold mb-2">
-                Travel Companion App
-              </h3>
-              <p class="text-slate-400 mb-4 text-sm sm:text-base">
-                A React Native travel application with location services,
-                itinerary planning, and social features for sharing travel
-                experiences.
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href="#"
-                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
-                  >View Project</a
-                >
-                <a
-                  href="#"
-                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div
-            class="fade-in card-hover bg-slate-900 rounded-2xl overflow-hidden shadow-lg"
-          >
-            <div
-              class="h-40 sm:h-48 bg-gradient-to-r from-teal-500 to-green-500 flex items-center justify-center"
-            >
-              <i class="fas fa-gamepad text-white text-4xl sm:text-6xl"></i>
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="text-lg sm:text-xl font-bold mb-2">
-                Multiplayer Game
-              </h3>
-              <p class="text-slate-400 mb-4 text-sm sm:text-base">
-                A real-time multiplayer game built with Socket.io, Node.js, and
-                React. Features live chat, leaderboards, and responsive design.
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href="#"
-                  class="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
-                  >View Project</a
-                >
-                <a
-                  href="#"
-                  class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-                >
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section
-      id="contact"
-      class="py-12 sm:py-16 md:py-20 gradient-bg section-padding"
-    >
-      <div class="container mx-auto px-4 sm:px-6">
-        <h2
-          class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center"
-        >
-          Get In Touch
-        </h2>
-
-        <div
-          class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 contact-grid"
-        >
-          <!-- Contact Form -->
-          <div class="fade-in">
-            <form
-              id="contact-form"
-              class="bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl"
-            >
-              <div class="mb-4 sm:mb-6">
-                <label
-                  for="name"
-                  class="block text-slate-300 mb-2 text-sm sm:text-base"
-                  >Your Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="w-full bg-slate-700 border border-slate-600 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                />
-              </div>
-
-              <div class="mb-4 sm:mb-6">
-                <label
-                  for="email"
-                  class="block text-slate-300 mb-2 text-sm sm:text-base"
-                  >Your Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="w-full bg-slate-700 border border-slate-600 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                />
-              </div>
-
-              <div class="mb-4 sm:mb-6">
-                <label
-                  for="message"
-                  class="block text-slate-300 mb-2 text-sm sm:text-base"
-                  >Your Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                  class="w-full bg-slate-700 border border-slate-600 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="w-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl py-2 sm:py-3 font-medium hover:shadow-lg transition-all text-sm sm:text-base"
-              >
-                Send Message
-              </button>
-
-              <div
-                id="form-message"
-                class="mt-4 text-center hidden text-sm sm:text-base"
-              ></div>
-            </form>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="fade-in">
-            <div class="bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl h-full">
-              <h3 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6">
-                Let's Connect
-              </h3>
-              <p class="text-slate-300 mb-6 sm:mb-8 text-sm sm:text-base">
-                I'm always open to discussing new opportunities, creative
-                projects, or just having a chat about technology and
-                development.
-              </p>
-
-              <div class="space-y-3 sm:space-y-4">
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center mr-3 sm:mr-4"
-                  >
-                    <i
-                      class="fas fa-envelope text-blue-400 text-sm sm:text-base"
-                    ></i>
-                  </div>
-                  <div>
-                    <p class="text-slate-400 text-sm sm:text-base">Email</p>
-                    <p class="text-sm sm:text-base">
-                      hello@developerparesh.com
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex items-center">
-                  <div
-                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center mr-3 sm:mr-4"
-                  >
-                    <i
-                      class="fas fa-map-marker-alt text-green-400 text-sm sm:text-base"
-                    ></i>
-                  </div>
-                  <div>
-                    <p class="text-slate-400 text-sm sm:text-base">Location</p>
-                    <p class="text-sm sm:text-base">
-                      Remote / Available Worldwide
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-6 sm:mt-8">
-                <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
-                  Follow Me
-                </h4>
-                <div class="flex space-x-3 sm:space-x-4">
-                  <a
-                    href="#"
-                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-500 transition-colors"
-                  >
-                    <i class="fab fa-github text-sm sm:text-base"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-400 transition-colors"
-                  >
-                    <i class="fab fa-linkedin-in text-sm sm:text-base"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-pink-500 transition-colors"
-                  >
-                    <i class="fab fa-dribbble text-sm sm:text-base"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-300 transition-colors"
-                  >
-                    <i class="fab fa-twitter text-sm sm:text-base"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 py-6 sm:py-8">
-      <div class="container mx-auto px-4 sm:px-6">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center mobile-stack"
-        >
-          <div class="mb-4 md:mb-0">
-            <p class="text-slate-400 text-sm sm:text-base">
-              © 2023 DeveloperParesh. All rights reserved.
-            </p>
-          </div>
-
-          <div class="flex space-x-4 sm:space-x-6 footer-links">
-            <a
-              href="#"
-              class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-            >
-              <i class="fab fa-google text-green-400 mr-1"></i> Business Profile
-            </a>
-            <a
-              href="#"
-              class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-              >Privacy Policy</a
-            >
-            <a
-              href="#"
-              class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
-              >Terms of Service</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-S2ZLK5802Q"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+  <script>
+    // Project data
+    const projects = {
+      'photo-editor': {
+        title: 'Advanced Photo Editor',
+        description: 'A professional-grade photo editing application with advanced features including AI-powered filters, frame customization, enhancement tools, and real-time preview. The app supports multiple image formats and offers cloud integration for seamless editing across devices.',
+        technologies: ['Kotlin', 'AI Integration', 'OpenCV', 'Firebase', 'Material Design'],
+        features: [
+          'AI-powered filter suggestions',
+          'Real-time preview and editing',
+          'Multiple frame and sticker options',
+          'Cloud synchronization',
+          'Social media integration'
+        ],
+        gradient: 'from-green-500 to-purple-500',
+        icon: 'fa-camera'
+      },
+      'gps-tracker': {
+        title: 'Real-time GPS Tracker',
+        description: 'A comprehensive location tracking application with real-time updates, geofencing capabilities, and family sharing features. The app ensures data security while providing accurate location tracking with hourly updates.',
+        technologies: ['Kotlin', 'GPS API', 'Google Maps', 'Firebase', 'Background Services'],
+        features: [
+          'Real-time location tracking',
+          'Geofencing with custom zones',
+          'Family sharing with permissions',
+          'Location history',
+          'Battery optimization'
+        ],
+        gradient: 'from-blue-500 to-teal-500',
+        icon: 'fa-map-marker-alt'
+      },
+      'live-tv': {
+        title: 'Live TV Streaming',
+        description: 'A multi-channel TV streaming application offering real-time show streaming, program guides, and personalized recommendations. The app supports various streaming protocols and provides smooth playback experience.',
+        technologies: ['Java', 'ExoPlayer', 'REST API', 'Firebase', 'Material Design'],
+        features: [
+          'Live TV streaming from multiple sources',
+          'Program guide with scheduling',
+          'Favorite channels and shows',
+          'Offline download capability',
+          'Parental controls'
+        ],
+        gradient: 'from-purple-500 to-pink-500',
+        icon: 'fa-tv'
+      },
+      'ai-chat': {
+        title: 'AI Chat Assistant',
+        description: 'An intelligent chatbot application integrated with ChatGPT API for natural conversations, task assistance, and personalized responses. The app learns from user interactions to provide better assistance over time.',
+        technologies: ['Kotlin', 'ChatGPT API', 'Firebase', 'Material Design', 'Speech Recognition'],
+        features: [
+          'Natural language conversations',
+          'Voice input and output',
+          'Context-aware responses',
+          'Multi-language support',
+          'Learning from interactions'
+        ],
+        gradient: 'from-yellow-500 to-red-500',
+        icon: 'fa-robot'
+      },
+      'qr-menu': {
+        title: 'QR Menu Restaurant',
+        description: 'A digital menu solution for restaurants with QR code scanning, order management, and payment integration. The app streamlines the ordering process while providing analytics for business owners.',
+        technologies: ['Kotlin', 'QR Code', 'Payment Gateway', 'Firebase', 'Admin Panel'],
+        features: [
+          'QR code menu scanning',
+          'Real-time order management',
+          'Multiple payment options',
+          'Table reservation system',
+          'Business analytics dashboard'
+        ],
+        gradient: 'from-indigo-500 to-blue-400',
+        icon: 'fa-qrcode'
+      },
+      'smart-parking': {
+        title: 'Smart Parking & EV Charging',
+        description: 'A comprehensive parking management system with EV charging station integration, real-time availability, and reservation capabilities. The app helps users find and reserve parking spots efficiently.',
+        technologies: ['Kotlin', 'Google Maps API', 'Payment Gateway', 'Firebase', 'IoT Integration'],
+        features: [
+          'Real-time parking spot availability',
+          'EV charging station locator',
+          'Reservation system',
+          'Digital payment integration',
+          'Route guidance to parking'
+        ],
+        gradient: 'from-teal-500 to-green-500',
+        icon: 'fa-car'
+      },
+      'trip-expenses': {
+        title: 'Trip Expenses Manager',
+        description: 'A comprehensive travel expense tracking application with receipt scanning, budget management, and multi-currency support. Perfect for business travelers and vacation planners.',
+        technologies: ['Kotlin', 'OCR Technology', 'Firebase', 'Multi-currency', 'Cloud Sync'],
+        features: [
+          'Receipt scanning with OCR',
+          'Multi-currency expense tracking',
+          'Budget alerts and reports',
+          'Trip categorization',
+          'Cloud backup and sync'
+        ],
+        gradient: 'from-amber-500 to-orange-500',
+        icon: 'fa-receipt'
+      },
+      'website-chatbot': {
+        title: 'Website Chat Bot',
+        description: 'An AI-powered customer support chatbot for websites with natural language processing, analytics dashboard, and seamless integration capabilities. Enhances customer engagement and support efficiency.',
+        technologies: ['JavaScript', 'Node.js', 'AI/ML', 'WebSocket', 'Analytics'],
+        features: [
+          'Natural language processing',
+          '24/7 customer support',
+          'Analytics and reporting',
+          'Easy website integration',
+          'Custom response flows'
+        ],
+        gradient: 'from-cyan-500 to-blue-500',
+        icon: 'fa-comments'
+      },
+      'lipsync': {
+        title: 'LipSync Video Editor',
+        description: 'An advanced video editing application with real-time lip synchronization technology, audio matching algorithms, and professional editing tools. Perfect for content creators and social media enthusiasts.',
+        technologies: ['Kotlin', 'Machine Learning', 'Video Processing', 'Audio Analysis', 'FFmpeg'],
+        features: [
+          'Real-time lip synchronization',
+          'Audio-video matching',
+          'Professional editing tools',
+          'Special effects and filters',
+          'Social media integration'
+        ],
+        gradient: 'from-pink-500 to-rose-500',
+        icon: 'fa-film'
       }
-      gtag("js", new Date());
+    };
 
-      gtag("config", "G-S2ZLK5802Q");
-    </script>
-    <script>
-      // Mobile menu toggle
-      document
-        .getElementById("mobile-menu-btn")
-        .addEventListener("click", function () {
-          const menu = document.getElementById("mobile-menu");
-          menu.classList.toggle("hidden");
-        });
+    // Modal functionality
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const projectId = card.getAttribute('data-project');
+        const project = projects[projectId];
 
-      // Scroll animations
-      function checkVisibility() {
-        const elements = document.querySelectorAll(".fade-in");
-        elements.forEach((element) => {
-          const position = element.getBoundingClientRect();
-          if (position.top < window.innerHeight - 100) {
-            element.classList.add("visible");
-          }
-        });
-      }
+        if (project) {
+          // Update modal content
+          document.getElementById('modal-title').textContent = project.title;
+          document.getElementById('modal-description').textContent = project.description;
 
-      // Initial check
-      checkVisibility();
+          // Update image/icon
+          const modalImage = document.getElementById('modal-image');
+          modalImage.className = `h-48 rounded-xl mb-6 flex items-center justify-center bg-gradient-to-r ${project.gradient}`;
+          modalImage.innerHTML = `<i class="fas ${project.icon} text-white text-6xl"></i>`;
 
-      // Check on scroll
-      window.addEventListener("scroll", checkVisibility);
+          // Update technologies
+          const techContainer = document.getElementById('modal-technologies');
+          techContainer.innerHTML = '';
+          project.technologies.forEach(tech => {
+            const span = document.createElement('span');
+            span.className = 'bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm';
+            span.textContent = tech;
+            techContainer.appendChild(span);
+          });
 
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+          // Update features
+          const featuresContainer = document.getElementById('modal-features');
+          featuresContainer.innerHTML = '';
+          project.features.forEach(feature => {
+            const li = document.createElement('li');
+            li.className = 'flex items-center';
+            li.innerHTML = `<i class="fas fa-check text-green-400 mr-2"></i>${feature}`;
+            featuresContainer.appendChild(li);
+          });
 
-            // Close mobile menu if open
-            document.getElementById("mobile-menu").classList.add("hidden");
-          }
-        });
+          // Show modal
+          document.getElementById('project-modal').classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
       });
+    });
 
-      // Contact form submission
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+    // Close modal
+    document.getElementById('close-modal').addEventListener('click', () => {
+      document.getElementById('project-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
 
-          const form = this;
-          const formData = new FormData(form);
-          const messageDiv = document.getElementById("form-message");
+    // Close modal when clicking outside
+    document.getElementById('project-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'project-modal') {
+        document.getElementById('project-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    });
 
-          // Show loading state
-          const submitBtn = form.querySelector('button[type="submit"]');
-          const originalText = submitBtn.textContent;
-          submitBtn.textContent = "Sending...";
-          submitBtn.disabled = true;
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('project-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
+  <!-- Contact Section -->
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 sm:py-16 md:py-20 bg-slate-800">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 fade-in mobile-text-center">
+        Let's Build Something Amazing
+      </h2>
 
-          // Simulate AJAX request (replace with actual endpoint)
-          setTimeout(() => {
-            // For demo purposes, we'll simulate a successful response
-            showMessage(
-              "Message sent successfully! I'll get back to you soon.",
-              "success"
-            );
-            form.reset();
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
 
-            // Reset button
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-          }, 1500);
+        <!-- PART 1: Contact Form -->
+        <div class="fade-in lg:col-span-2">
+          <form id="contact-form" class="bg-slate-900 rounded-2xl p-6 sm:p-8 shadow-xl">
+            <h3 class="text-xl font-bold mb-6 text-green-400">Send Me a Message</h3>
 
-          function showMessage(text, type) {
-            messageDiv.textContent = text;
-            messageDiv.className =
-              "mt-4 text-center p-3 rounded-xl text-sm sm:text-base";
-            if (type === "success") {
-              messageDiv.classList.add("bg-green-900", "text-green-300");
-            } else {
-              messageDiv.classList.add("bg-red-900", "text-red-300");
-            }
-            messageDiv.classList.remove("hidden");
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
+              <div>
+                <label for="name" class="block text-slate-300 mb-2 text-sm sm:text-base">Your
+                  Name</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base transition-colors"
+                  placeholder="Enter your name">
+              </div>
 
-            // Hide message after 5 seconds
-            setTimeout(() => {
-              messageDiv.classList.add("hidden");
-            }, 5000);
+              <div>
+                <label for="email" class="block text-slate-300 mb-2 text-sm sm:text-base">Your
+                  Email</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base transition-colors"
+                  placeholder="Enter your email">
+              </div>
+            </div>
+
+            <div class="mb-4 sm:mb-6">
+              <label for="subject" class="block text-slate-300 mb-2 text-sm sm:text-base">Subject</label>
+              <input type="text" id="subject" name="subject" required
+                class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base transition-colors"
+                placeholder="Project discussion / Hiring">
+            </div>
+
+            <div class="mb-4 sm:mb-6">
+              <label for="message" class="block text-slate-300 mb-2 text-sm sm:text-base">Your
+                Message</label>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base transition-colors resize-none"
+                placeholder="Tell me about your project requirements, timeline, and budget..."></textarea>
+            </div>
+
+            <div class="mb-4 sm:mb-6">
+              <label for="project-type" class="block text-slate-300 mb-2 text-sm sm:text-base">Project
+                Type</label>
+              <select id="project-type" name="project-type"
+                class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base transition-colors">
+                <option value="">Select project type</option>
+                <option value="android-app">Android App Development</option>
+                <option value="kotlin-app">Kotlin App Development</option>
+                <option value="ui-ux">UI/UX Design</option>
+                <option value="consultation">Technical Consultation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-gradient-to-r from-green-500 to-purple-500 rounded-xl py-3 sm:py-4 font-medium hover:shadow-lg transition-all text-sm sm:text-base transform hover:-translate-y-1">
+              Send Message
+            </button>
+
+            <div id="form-message" class="mt-4 text-center hidden text-sm sm:text-base"></div>
+          </form>
+        </div>
+
+        <!-- PART 2: Contact Info -->
+        <!-- PART 2: Contact Info -->
+        <div class="fade-in">
+          <div class="bg-slate-900 rounded-2xl p-6 sm:p-8 shadow-xl h-full">
+            <h3 class="text-xl font-bold mb-6 text-green-400">Contact Information</h3>
+
+            <div class="space-y-6 mb-8">
+              <!-- Email -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fas fa-envelope text-green-400"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-slate-400 text-sm mb-1">Email</p>
+                  <p class="text-slate-200 font-medium text-sm truncate">developerparesh.dev@gmail.com
+                  </p>
+                  <a href="mailto:developerparesh.dev@gmail.com"
+                    class="text-green-400 hover:text-green-300 text-sm transition-colors inline-block mt-1">
+                    Send email
+                  </a>
+                </div>
+              </div>
+
+              <!-- Phone / WhatsApp -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fas fa-phone-alt text-green-400"></i>
+                </div>
+                <div>
+                  <p class="text-slate-400 text-sm mb-1">Phone / WhatsApp</p>
+                  <p class="text-slate-200 font-medium text-sm">+91 63527 08697</p>
+                  <p class="text-slate-200 font-medium text-sm">+91 90812 00621</p>
+                  <a href="https://wa.me/919081200621" target="_blank"
+                    class="text-green-400 hover:text-green-300 text-sm transition-colors inline-block mt-1">
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-green-400"></i>
+                </div>
+                <div>
+                  <p class="text-slate-400 text-sm mb-1">Location</p>
+                  <p class="text-slate-200 font-medium text-sm">Vesu, Surat</p>
+                  <p class="text-slate-400 text-sm">395007 • Gujarat</p>
+                </div>
+              </div>
+
+              <!-- Google Business -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fas fa-building text-green-400"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-slate-400 text-sm mb-1">Google Business</p>
+                  <div class="bg-slate-800 rounded-lg p-3 mb-2">
+                    <div class="flex items-center justify-between mb-1">
+                      <span class="text-slate-200 font-medium text-sm truncate">Paresh
+                        Chauhan</span>
+                      <span
+                        class="bg-green-900 text-green-300 px-2 py-1 rounded-full text-xs flex-shrink-0 ml-2">Verified</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400 text-xs mr-1"></i>
+                        <span class="text-slate-200 text-sm">4.8</span>
+                      </div>
+                      <span class="text-slate-500 text-xs">•</span>
+                      <span class="text-slate-400 text-xs">12 reviews</span>
+                    </div>
+                  </div>
+                  <a href="https://www.google.co.in/search?q=Android+developer+Surat+Paresh" target="_blank"
+                    class="text-green-400 hover:text-green-300 text-sm transition-colors">
+                    View Business Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="border-t border-slate-700 pt-6">
+              <h4 class="text-lg font-semibold mb-4 text-slate-300">Business Hours</h4>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-400">Mon - Fri</span>
+                  <span class="text-green-400 font-medium">9:00 AM - 7:00 PM</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-400">Saturday</span>
+                  <span class="text-green-400 font-medium">10:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-400">Sunday</span>
+                  <span class="text-orange-400 font-medium">Emergency Only</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PART 3: Social Links -->
+        <div class="fade-in lg:col-span-3">
+          <div class="bg-slate-900 rounded-2xl p-6 sm:p-8 shadow-xl">
+            <h3 class="text-xl font-bold mb-6 text-center text-green-400">Follow & Connect</h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/916352708697" target="_blank"
+                class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-4 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 group">
+                <i class="fab fa-whatsapp text-white text-2xl mb-2"></i>
+                <p class="text-white font-medium text-sm">WhatsApp</p>
+                <p class="text-green-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Chat Now</p>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/ig._.paresh/" target="_blank"
+                class="bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl p-4 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 group">
+                <i class="fab fa-instagram text-white text-2xl mb-2"></i>
+                <p class="text-white font-medium text-sm">Instagram</p>
+                <p class="text-pink-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Follow</p>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://in.linkedin.com/in/chauhan-paresh-915340236" target="_blank"
+                class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 group">
+                <i class="fab fa-linkedin-in text-white text-2xl mb-2"></i>
+                <p class="text-white font-medium text-sm">LinkedIn</p>
+                <p class="text-blue-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Connect</p>
+              </a>
+
+              <!-- Portfolio -->
+              <a href="https://developerparesh.github.io/profile/" target="_blank"
+                class="bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl p-4 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 group">
+                <i class="fas fa-globe text-white text-2xl mb-2"></i>
+                <p class="text-white font-medium text-sm">Portfolio</p>
+                <p class="text-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Visit</p>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/61566356983828/" target="_blank"
+                class="bg-gradient-to-br from-blue-700 to-blue-800 rounded-xl p-4 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 group">
+                <i class="fab fa-facebook-f text-white text-2xl mb-2"></i>
+                <p class="text-white font-medium text-sm">Facebook</p>
+                <p class="text-blue-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Follow</p>
+              </a>
+
+              <!-- Blogger -->
+              <a href="https://androiddeveloperparesh.blogspot.com/" target="_blank"
+                class="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-4 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 group">
+                <i class="fab fa-blogger-b text-white text-2xl mb-2"></i>
+                <p class="text-white font-medium text-sm">Blogger</p>
+                <p class="text-orange-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  Read Blog</p>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/developerparesh" target="_blank"
+                class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-4 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 group">
+                <i class="fab fa-github text-white text-2xl mb-2"></i>
+                <p class="text-white font-medium text-sm">GitHub</p>
+                <p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  View Code</p>
+              </a>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a href="https://wa.me/916352708697?text=Hi%20Paresh,%20I'm%20interested%20in%20your%20Android%20development%20services"
+                target="_blank"
+                class="bg-green-600 hover:bg-green-700 rounded-xl py-3 px-4 font-medium transition-all text-center flex items-center justify-center">
+                <i class="fab fa-whatsapp mr-2"></i>
+                <span>Quick Chat</span>
+              </a>
+
+              <a href="https://www.google.co.in/search?q=Android+developer+Surat+Paresh" target="_blank"
+                class="bg-blue-600 hover:bg-blue-700 rounded-xl py-3 px-4 font-medium transition-all text-center flex items-center justify-center">
+                <i class="fas fa-star mr-2"></i>
+                <span>Google Reviews</span>
+              </a>
+
+              <a href="#contact-form"
+                class="bg-gradient-to-r from-green-500 to-purple-500 hover:shadow-lg rounded-xl py-3 px-4 font-medium transition-all text-center flex items-center justify-center">
+                <i class="fas fa-paper-plane mr-2"></i>
+                <span>Send Message</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 py-6 sm:py-8 border-t border-slate-800">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-slate-400 text-sm sm:text-base">
+            © 2023 Paresh Chauhan. Android & Kotlin App Developer.
+          </p>
+        </div>
+
+        <div class="flex space-x-4 sm:space-x-6">
+          <a href="PrivacyPolicy.html" class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base">
+            Privacy Policy
+          </a>
+          <a href="PrivacyPolicy.html#terms-content"
+            class="text-slate-400 hover:text-white transition-colors text-sm sm:text-base">
+            Terms of Service
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pareshchauhan.com/#person",
+          "name": "Paresh Chauhan",
+          "url": "https://pareshchauhan.com",
+          "email": "developerparesh.dev@gmail.com",
+          "telephone": "+916352708697",
+          "jobTitle": "Android Developer",
+          "description": "Professional Android developer with 2+ years experience specializing in Kotlin, Java, and Google Play deployment.",
+          "knowsAbout": ["Android Development", "Kotlin", "Java", "Android Jetpack", "Google Play Deployment", "Mobile UI/UX", "Material Design", "API Integration", "Firebase"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Surat",
+            "postalCode": "395007",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://www.instagram.com/ig._.paresh/",
+            "https://developerparesh.github.io/profile/",
+            "https://www.facebook.com/pareshchauhan"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pareshchauhan.com/#website",
+          "url": "https://pareshchauhan.com",
+          "name": "Paresh Chauhan - Android Developer",
+          "description": "Professional Android developer specializing in Kotlin, Java, and Google Play deployment with 2+ years experience.",
+          "publisher": {
+            "@id": "https://pareshchauhan.com/#person"
           }
-        });
+        },
+        {
+          "@type": "Service",
+          "name": "Android App Development",
+          "serviceType": "Mobile Application Development",
+          "provider": {
+            "@id": "https://pareshchauhan.com/#person"
+          },
+          "description": "Native Android app development using Kotlin, Java, and modern Android frameworks with Google Play Store deployment.",
+          "areaServed": "Worldwide"
+        }
+      ]
+    }
+    
     </script>
-  </body>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Scroll animations
+    function checkVisibility() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        if (position.top < window.innerHeight - 100) {
+          element.classList.add('visible');
+        }
+      });
+    }
+
+    // Initial check
+    checkVisibility();
+
+    // Check on scroll
+    window.addEventListener('scroll', checkVisibility);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+          // Close mobile menu if open
+          document.getElementById('mobile-menu').classList.add('hidden');
+        }
+      });
+    });
+
+    // Contact form submission
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = this;
+      const formData = new FormData(form);
+      const messageDiv = document.getElementById('form-message');
+
+      // Show loading state
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      // Simulate AJAX request (replace with actual endpoint)
+      setTimeout(() => {
+        // For demo purposes, we'll simulate a successful response
+        showMessage('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
+        form.reset();
+
+        // Reset button
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 1500);
+
+      function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = 'mt-4 text-center p-3 rounded-xl text-sm sm:text-base';
+        if (type === 'success') {
+          messageDiv.classList.add('bg-green-900', 'text-green-300');
+        } else {
+          messageDiv.classList.add('bg-red-900', 'text-red-300');
+        }
+        messageDiv.classList.remove('hidden');
+
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          messageDiv.classList.add('hidden');
+        }, 5000);
+      }
+    });
+  </script>
+</body>
+
 </html>
